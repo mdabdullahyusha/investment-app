@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investment App</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <h1
+        class="text-center text-blue-600 text-6xl font-raleway font-bold pt-3"
+      >
+        JAVASCRIPT PROJECT
+      </h1>
+    </section>
+
+    <section class="container mx-auto mt-5 p-5">
+      <div class="grid grid-cols-6 text-center gap-6">
+        <div class="bg-slate-100 p-5 col-span-2 rounded-md shadow-lg">
+          <canvas id="investChart"></canvas>
+        </div>
+        <div class="bg-rose-200 col-span-4 rounded-md">
+          <div class="bg-emerald-400 mx-6 p-28 rounded-md mt-5">
+            <h1 class="text-5xl font-semibold text-slate-100">
+              Total Amount : <span id="overallAmount">0</span> ৳
+            </h1>
+          </div>
+
+          <div class="grid grid-cols-2">
+            <div
+              class="p-5 bg-slate-800 m-5 rounded-md text-white font-bold text-2xl"
+            >
+              Deposit : <span id="depositTotal">0</span> ৳
+            </div>
+            <div
+              class="p-5 bg-slate-700 m-5 rounded-md text-white font-bold text-2xl"
+            >
+              Withdraw : <span id="withdrawTotal">0</span> ৳
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2">
+            <div
+              class="p-5 bg-green-500 m-5 mt-0 rounded-md text-white font-bold text-2xl"
+            >
+              <input
+                type="number"
+                id="deposit_input"
+                class="text-slate-800 rounded-md outline-none w-[100%] p-1"
+                min="0"
+                required
+              />
+              <button
+                class="p-2 bg-slate-800 mt-2 text-lg rounded-md deposit_btn"
+              >
+                Deposit Now
+              </button>
+            </div>
+            <div
+              class="p-5 bg-rose-600 m-5 mt-0 rounded-md text-white font-bold text-2xl"
+            >
+              <input
+                type="number"
+                id="withdraw_input"
+                class="text-slate-800 rounded-md outline-none w-[100%] p-1"
+                min="0"
+                required
+              />
+              <button
+                id="withdraw_btn"
+                class="p-2 bg-slate-800 mt-2 text-lg rounded-md"
+              >
+                Withdraw Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="deposit.js"></script>
+    <script src="withdraw.js"></script>
+    <script src="chart.js"></script>
+  </body>
+</html>
